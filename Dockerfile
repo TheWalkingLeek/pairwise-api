@@ -8,4 +8,4 @@ RUN gem install bundler -v 1.1.5
 RUN bundle install
 COPY . .
 
-CMD bundle exec puma -p 3000
+CMD bundle exec passenger start -p 3000
