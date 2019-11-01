@@ -8,6 +8,4 @@ RUN gem install bundler -v 1.1.5
 RUN bundle install
 COPY . .
 
-CMD ./bin/rake db:create; ./bin/rake db:test:load; ./bin/rake db:test:prepare; ./bin/rake db:migrate
-
-CMD bundle exec ruby ./script/server -p 3000
+CMD bundle exec puma -p 3000

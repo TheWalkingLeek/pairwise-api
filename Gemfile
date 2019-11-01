@@ -29,6 +29,8 @@ gem "json_pure", "1.4.6"
 gem "rubaidh-google_analytics", "1.1.4", :require => "rubaidh/google_analytics"
 gem 'mysql2', '0.2.24'
 
+gem 'puma', '~> 3.9.1'
+
 group :cucumber do
   gem 'cucumber', '1.1.0'
   gem 'cucumber-rails', '0.3.2'
