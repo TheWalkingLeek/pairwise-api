@@ -1,5 +1,5 @@
 FROM ruby:1.9
-ENV RAILS_ENV=development
+ENV RAILS_ENV=production
 WORKDIR /usr/src/pairwise-app
 USER root
 COPY Gemfile Gemfile.lock ./

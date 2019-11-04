@@ -7,7 +7,18 @@ development: &default
   user: root
   pool: 5
   timeout: 5000
-  host: pairwisedb
+  host: aoi_pairwise_db
+  port: 3306
+  username: root
+  password: 123456
+
+production:
+  adapter: mysql2
+  database: rebirth_production
+  user: root
+  pool: 5
+  timeout: 5000
+  host: aoi-pairwise-db
   port: 3306
   username: root
   password: 123456
