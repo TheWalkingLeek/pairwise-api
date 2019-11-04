@@ -13,15 +13,15 @@ development: &default
   password: 123456
 
 production:
-  adapter: mysql2
-  database: rebirth_production
-  user: root
+  adapter: <%= ENV['RAILS_DB_ADAPTER'] || 'mysql2' %>
+  host: <%= ENV['RAILS_DB_HOST'] || 'aoi-pairwise-db' %>
+  port: <%= ENV['RAILS_DB_PORT'] || 3306 %>
+  user: <%= ENV['RAILS_DB_USERNAME'] || 'root' %>
+  username: <%= ENV['RAILS_DB_USERNAME'] || 'root' %>
+  password: <%= ENV['RAILS_DB_PASSWORD'] || '123456' %>
+  database: <%= ENV['RAILS_DB_NAME'] || 'rebirth_production' %>
   pool: 5
   timeout: 5000
-  host: aoi-pairwise-db
-  port: 3306
-  username: root
-  password: 123456
 
 test: &test
   <<: *default
